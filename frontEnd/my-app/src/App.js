@@ -21,7 +21,7 @@ function App() {
       {/* <Navbar/> */}
         <AllRoutes/>
       {/* <Footer/> */}
-     </ConTainer>
+     </Container>
     </ChakraProvider>
   );
 }
