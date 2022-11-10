@@ -13,6 +13,7 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import AllRoutes from './Routes/AllRoutes';
+import { Navigation } from './Product/Sidebar/Navigation';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
      <Container maxW="100%" p="0px">
       {/* <Navbar/> */}
         <AllRoutes/>
+      
       {/* <Footer/> */}
      </Container>
     </ChakraProvider>
