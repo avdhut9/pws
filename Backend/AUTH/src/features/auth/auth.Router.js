@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express.Router();
-const authModel = require("./Auth.model");
+const authModel = require("./auth.model");
 
 app.get("/", async (req, res) => {
   try {
