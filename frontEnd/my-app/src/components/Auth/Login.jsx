@@ -9,6 +9,7 @@ import "./Login.module.css"
 const Login = () => {
     const [show ,setShow] = useState(false)
     const {postLogin,sentence,logError} = useContext(AuthContext)
+    
     const lineStyleL={
         width: "190px",
     border: "0.5px solid #c5c7d0",
@@ -32,6 +33,7 @@ const Login = () => {
         console.log("jdcn")
         postLogin(state)
     }
+
   return (
     <Box w="40%" m="auto">
         <Center display="flex" m="auto" w="5%"   mt="50px" >
