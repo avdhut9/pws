@@ -1,0 +1,38 @@
+.Header {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100px;
+    display: flex;
+}
+section.sec-I {
+    display: flex;
+    width: 50%;
+    text-align: start;
+    margin: auto;
+    justify-content: flex-start;
+}
+.hih3{
+    margin-top: 0px;
+    font-size: 20px;
+}
+.pra {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+section.sec-I {
+    display: flex;
+   
+    text-align: start;
+    margin: auto;
+    justify-content: space-evenly;
+}
+section.sec-II {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 30%;
+    margin: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+}

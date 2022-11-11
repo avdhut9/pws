@@ -1,3 +1,4 @@
+
 import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
 const breakpoints = {
     base:"repeat(2,1fr)",
@@ -60,4 +61,5 @@ export default function Logos(){
             </Grid>
         </Box>
     )
+
 }

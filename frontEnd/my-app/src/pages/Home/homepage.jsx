@@ -1,3 +1,4 @@
+
 import { Box, Container } from "@chakra-ui/react";
 import Home from "../../components/Home/Home";
 // 
@@ -7,4 +8,5 @@ export default function Homepage(){
     <Home/>
 </Box>
    )
+
 }
