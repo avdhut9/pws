@@ -15,7 +15,6 @@ root.render(
     <BrowserRouter>
     <ColorModeScript />
     <App />
- 
     </BrowserRouter>
     </AuthProvider>
   </StrictMode>

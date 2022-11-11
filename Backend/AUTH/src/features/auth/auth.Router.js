@@ -19,7 +19,7 @@ app.post("/login", async (req, res) => {
     console.log(user);
     if (user) {
       if (password == user.password) {
-        res.send(`{token:${email}-${user._id}}`);
+        res.send({ token: `${user.name}-${email}-${user._id}` });
       } else {
         res.send(`wrong Password for the ${email}`);
       }
