@@ -5,7 +5,7 @@ import Homepage from "../pages/Home/homepage";
 export default function AllRoutes(){
    return( 
    <Routes>
-    {/* <Route path="/" element={<Homepage/>}/> */}
+    <Route path="/" element={<Homepage/>}/>
    </Routes>
    )
 }
