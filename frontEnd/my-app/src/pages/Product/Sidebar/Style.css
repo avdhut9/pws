@@ -31,12 +31,13 @@
 .Rightsidebar {
     /* border: solid 2px black; */
     /* height: 500px; */
-    width: 40%;
+    /* width: 40%; */
+    gap: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
+    /* flex-wrap: nowrap; */
+    /* align-items: center; */
 }
 .Middle {
     /* margin: 20px; */
@@ -68,10 +69,10 @@ svg {
 .div1 {
     display: flex;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-    justify-content: space-between;
+    justify-content: flex-start;
     text-align: start;
     /* height: 90px; */
-    gap: 0px;
+    gap: 13px;
     padding: 8px;
     width: 100%;
     /* margin-bottom: -20px; */
@@ -79,5 +80,30 @@ svg {
     /* padding-top: 26px; */
     /* margin: 0px; */
     border-radius: 10px;
-    align-items: center;
+    align-items: stretch;
+}
+button.btn.btn-light {
+    border: 2px solid #c8c2c2;
+    width: 100%;
+    cursor: pointer;
+}
+h6 {
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+div2 {
+    text-align: start;
+    width: 100%;
+}
+
+
+button.vfd.btn.btn-primary {
+    border: none;
+    height: 100px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #10d410;
+    width: 33px;
+    margin: 20px;
 }

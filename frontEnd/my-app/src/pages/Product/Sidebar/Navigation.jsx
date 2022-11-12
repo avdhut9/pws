@@ -14,7 +14,8 @@ export const Navigation = () => {
      <div className='Midrig'>
      <Header/>
      <div className='Midrigwh'>
-     <Middle/>
+      <Middle/>
+      
       <Rightsidebar/>
      </div>
     

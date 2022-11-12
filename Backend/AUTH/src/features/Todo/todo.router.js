@@ -119,7 +119,7 @@ app.delete("/", async (req, res) => {
 
 app.patch("/", async (req, res) => {
   const { groupId, titleId } = req.query; // todo
-
+  
   if (!groupId || !titleId) {
     return res.status(200).send("Missing quires");
   }
@@ -128,7 +128,7 @@ app.patch("/", async (req, res) => {
 
     let filter = todo.map((item) => {
       if (item._id.toString() === titleId) {
-        item.status = !item.status;
+           item = req.body.todo ;
       }
       return item;
     });

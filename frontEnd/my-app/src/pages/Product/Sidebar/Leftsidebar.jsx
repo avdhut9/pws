@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsBookmark,BsBell,BsFillInboxFill,BsCalendarCheck,BsStar,BsApple,BsPersonPlus,BsSearch,BsQuestion,BsGrid3X3Gap } from "react-icons/bs";
-
+import Button from 'react-bootstrap/Button';
  import { FaUserCircle } from 'react-icons/fa';
 const Leftsidebar = () => {
   return (
@@ -16,6 +16,9 @@ const Leftsidebar = () => {
       <ul><BsFillInboxFill/></ul>
       <ul><BsCalendarCheck/></ul>
       <ul><BsStar/></ul>
+      <Button className="vfd">
+        
+        </Button>
       <ul><BsApple/></ul>
       <ul><BsPersonPlus/></ul>
       <ul><BsSearch/></ul>

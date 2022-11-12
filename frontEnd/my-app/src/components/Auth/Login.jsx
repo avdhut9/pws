@@ -9,6 +9,7 @@ import "./Login.module.css"
 const Login = () => {
     const [show ,setShow] = useState(false)
     const {postLogin,sentence,logError} = useContext(AuthContext)
+    
     const lineStyleL={
         width: "190px",
     border: "0.5px solid #c5c7d0",
@@ -32,6 +33,7 @@ const Login = () => {
         console.log("jdcn")
         postLogin(state)
     }
+
   return (
     <Box w="40%" m="auto">
         <Center display="flex" m="auto" w="5%"   mt="50px" >
@@ -60,7 +62,7 @@ const Login = () => {
             <br />
             <h1 style={{marginLeft:"75px",marginRight:"10px",marginTop:"10px",color:"#0073ea"}}>Forgot your password ?</h1>
             <Input type="submit"onClick={handleLogin} value="Login →" size="lg" ml="75px" w="85%" bg="#0073ea" color="white"/>
-            { logError && <h1 style={{marginLeft:"75px",marginRight:"10px",marginTop:"10px",color:"red"}}>Incorrect Credentials</h1>}
+            { logError && <h1 style={{marginLeft:"75px",marginRight:"10px",marginTop:"10px",color:"red"}}>Incorrect Crediantials</h1>}
             <Center mt="30px"><span style={lineStyleL}></span> Or Sign in with <span style={lineStyleL}></span></Center>
         </FormControl>
         <br />

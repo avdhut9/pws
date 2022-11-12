@@ -4,19 +4,22 @@ import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
-import {BrowserRouter} from "react-router-dom"
+import { BrowserRouter } from 'react-router-dom';
 import AuthProvider from './contextapi/Authentication/Authentication';
+import Tablecontextprovider from './contextapi/tablecontext/table';
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
-    <AuthProvider>
     <BrowserRouter>
-    <ColorModeScript />
-    <App />
+      <AuthProvider>
+        <Tablecontextprovider>
+          <ColorModeScript />
+          <App />
+        </Tablecontextprovider>
+      </AuthProvider>
     </BrowserRouter>
-    </AuthProvider>
   </StrictMode>
 );
 

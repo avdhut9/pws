@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const file = {
-  name: { type: String,require:true },
+  name: { type: String,required:true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   age: { type: String, min: 20, max: 100 },
