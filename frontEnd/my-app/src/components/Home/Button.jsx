@@ -1,3 +1,4 @@
+
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Box, VStack,Button } from "@chakra-ui/react";
 
@@ -9,4 +10,5 @@ export default function Buttonx(){
        </VStack>
     </Box>
     )
+
 }

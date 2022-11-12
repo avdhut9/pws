@@ -6,18 +6,21 @@ import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom"
 import AuthProvider from './contextapi/Authentication/Authentication';
+import Tablecontextprovider from './contextapi/tablecontext/table';
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
     <AuthProvider>
+      <Tablecontextprovider>
     <BrowserRouter>
     <ColorModeScript />
     <App />
- 
     </BrowserRouter>
+    </Tablecontextprovider>
     </AuthProvider>
+    
   </StrictMode>
 );
 

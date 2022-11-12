@@ -1,11 +1,15 @@
+
 import { Box, Button, Checkbox, Container, Grid, GridItem, Heading, Image, Input, Text, VStack } from "@chakra-ui/react";
 import { ArrowForwardIcon} from '@chakra-ui/icons'
 import Logos from "./logos";
 import Buttonx from "./Button";
+import Workflow from "./workos/workosmain";
+import Slider from "./Slider/Slider";
+import Main from "./DynamicPart/main";
 const breakpoints = {
-    base:"repeat(3,1fr)",
-    sm: "repeat(4,1fr)",
-    md: "repeat(6,1fr)",
+    base:"repeat(2,1fr)",
+    sm: "repeat(3,1fr)",
+    md: "repeat(5,1fr)",
     lg: "repeat(7,1fr)",
     xl: "repeat(9,1fr)",
     '2xl': "repeat(9,1fr)",
@@ -37,55 +41,55 @@ What would you like to manage with monday.com Work OS?
  <Grid templateColumns={breakpoints}   color="white" justifyContent="center" gap="12px">
     <GridItem>
         
-            <Box  border="1px" p="5px" borderColor="#777794" borderRadius={7}  _hover={{ borderColor:"pink",cursor:"pointer" }} >
+            <Box  border="1px" p="5px" borderColor="#777794" borderRadius={7}  _hover={{ borderColor:"pink",cursor:"pointer" }} height="130px" w="120px" >
 <Checkbox colorScheme='pink' iconColor="#0c0d44" borderColor="#777794" size='lg'/>
 <Image w="35%" m="auto" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/marketing_icon.png"/>
-<Text textAlign="center">Creative & design</Text>
+<Text textAlign="center">Marketing</Text>
         </Box>
        
     </GridItem>
     <GridItem>
-        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"orange",cursor:"pointer" }}>
+        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"orange",cursor:"pointer" }} height="130px" w="120px">
         <Checkbox colorScheme='orange' iconColor="#0c0d44" borderColor="#777794" size='lg'/>
         <Image w="35%" m="auto" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/pmo_icon.png"/>
-<Text textAlign="center">Creative & design</Text>
+<Text textAlign="center">Project Management</Text>
         
         </Box>
     </GridItem>
     <GridItem>
-        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"green.100",cursor:"pointer" }}>
+        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"green.100",cursor:"pointer" }} height="130px" w="120px">
         <Checkbox colorScheme="blue" iconColor="#0c0d44" borderColor="#777794" size='lg'/>
         <Image w="35%" m="auto" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/crm_icon.png"/>
-<Text textAlign="center">Creative & design</Text>
+<Text textAlign="center">Sales And CRM</Text>
          
         </Box>
     </GridItem>
     <GridItem>
-        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"pink",cursor:"pointer" }}>
+        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"pink",cursor:"pointer" }} height="130px"w="120px">
         <Checkbox colorScheme='pink' borderColor="#777794" iconColor="#0c0d44" size='lg'/>
         <Image w="35%" m="auto" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/hr_icon.png"/>
-<Text textAlign="center">Creative & design</Text>
+<Text textAlign="center">HR</Text>
           
         </Box>
     </GridItem>
     <GridItem>
-        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"blue",cursor:"pointer" }}>
+        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"blue",cursor:"pointer" }}height="130px" w="120px">
         <Checkbox colorScheme='blue' iconColor="#0c0d44"  borderColor="#777794" size='lg'/>
         <Image w="35%" m="auto" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/task_icon.png"/>
-<Text textAlign="center">Creative & design</Text>
+<Text textAlign="center">Task Mangement</Text>
            
         </Box>
     </GridItem>
     <GridItem>
-        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"blue",cursor:"pointer" }}>
+        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"blue",cursor:"pointer" }} height="130px" w="120px">
         <Checkbox colorScheme='blue' borderColor="#777794" iconColor="#0c0d44" size='lg'/>
         <Image w="35%" m="auto" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/operations_icon.png"/>
-<Text textAlign="center">Creative & design</Text>
+<Text textAlign="center">Operations</Text>
           
         </Box>
     </GridItem>
     <GridItem>
-        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"pink",cursor:"pointer" }}>
+        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"pink",cursor:"pointer" }} height="130px" w="120px">
         <Checkbox colorScheme='pink' borderColor="#777794" iconColor="#0c0d44" size='lg'/>
         <Image w="35%" m="auto" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/design_icon.png"/>
 <Text textAlign="center">Creative & design</Text>
@@ -93,18 +97,18 @@ What would you like to manage with monday.com Work OS?
         </Box>
     </GridItem>
     <GridItem>
-        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"blue",cursor:"pointer" }}> 
+        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"blue",cursor:"pointer" }} height="130px" w="120px"> 
         <Checkbox colorScheme='blue' borderColor="#777794" iconColor="#0c0d44" size='lg'/>
         <Image w="35%" m="auto" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/workflows_icon.png"/>
-<Text textAlign="center">Creative & design</Text>
+<Text textAlign="center">More Workflows</Text>
             
         </Box>
     </GridItem>
     <GridItem>
-        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"green",cursor:"pointer" }}>
+        <Box border="1px" p="5px" borderColor="#777794" borderRadius={7} _hover={{ borderColor:"green",cursor:"pointer" }} height="130px" w="120px">
         <Checkbox colorScheme='teal' borderColor="#777794" iconColor="#0c0d44" size='lg'/>
         <Image w="35%" m="auto" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/dev_icon.png"/>
-<Text textAlign="center">Creative & design</Text>
+<Text textAlign="center">Software development</Text>
             
         </Box>
     </GridItem>
@@ -121,13 +125,18 @@ What would you like to manage with monday.com Work OS?
         <VStack p="20px"><Text textAlign="center" margin="auto" fontSize="21px" >Trusted by 152,000+ customers worldwide</Text></VStack>
     </Box>
     <Logos/>
-    <Box >
-        <Image src="https://iili.io/y2BUBa.jpg"/>
+    <Workflow/>
+    <Box  >
+        <Image  w="100%" src="https://iili.io/y2BUBa.jpg"/>
     </Box>
+    <Slider/>
+    <Main/>
+    
 </Box>
 
    )
 }
+
 {/* <picture class="jsx-4212101279 picture-component star-picture"><img alt="marketing icon" class="jsx-4212101279 star-icon" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/marketing_icon.png"></picture> */}
 {/* <div tabindex="0" role="checkbox" aria-checked="false" class="jsx-1026031917 square-tag-component selectable-cluster" style="color: rgb(255, 153, 0);"><div class="jsx-1026031917 background-circle"></div><div class="jsx-1026031917 checkbox"><svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M8.53033 14.2478L8 13.7175L7.46967 14.2478C7.76256 14.5407 8.23744 14.5407 8.53033 14.2478ZM8 12.6569L4.53033 9.18718C4.23744 8.89429 3.76256 8.89429 3.46967 9.18718C3.17678 9.48008 3.17678 9.95495 3.46967 10.2478L7.46967 14.2478L8 13.7175L8.53033 14.2478L16.2478 6.53033C16.5407 6.23743 16.5407 5.76256 16.2478 5.46967C15.955 5.17677 15.4801 5.17677 15.1872 5.46967L8 12.6569Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div><div class="jsx-1026031917 star-image"><picture class="jsx-4212101279 picture-component star-picture"><img alt="pmo icon" class="jsx-4212101279 star-icon" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/pmo_icon.png"></picture></div><div class="jsx-1026031917 star-text">Project management</div></div> */}
 {/* <div tabindex="0" role="checkbox" aria-checked="false" class="jsx-1026031917 square-tag-component selectable-cluster" style="color: rgb(0, 210, 210);"><div class="jsx-1026031917 background-circle"></div><div class="jsx-1026031917 checkbox"><svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M8.53033 14.2478L8 13.7175L7.46967 14.2478C7.76256 14.5407 8.23744 14.5407 8.53033 14.2478ZM8 12.6569L4.53033 9.18718C4.23744 8.89429 3.76256 8.89429 3.46967 9.18718C3.17678 9.48008 3.17678 9.95495 3.46967 10.2478L7.46967 14.2478L8 13.7175L8.53033 14.2478L16.2478 6.53033C16.5407 6.23743 16.5407 5.76256 16.2478 5.46967C15.955 5.17677 15.4801 5.17677 15.1872 5.46967L8 12.6569Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div><div class="jsx-1026031917 star-image"><picture class="jsx-4212101279 picture-component star-picture"><img alt="crm icon" class="jsx-4212101279 star-icon" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/crm_icon.png"></picture></div><div class="jsx-1026031917 star-text">Sales &amp; CRM</div></div> */}
@@ -137,3 +146,4 @@ What would you like to manage with monday.com Work OS?
 {/* <div class="star-wrapper" style="width: 140px;"><div tabindex="0" role="checkbox" aria-checked="false" class="jsx-1026031917 square-tag-component selectable-cluster" style="color: rgb(255, 21, 138);"><div class="jsx-1026031917 background-circle"></div><div class="jsx-1026031917 checkbox"><svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M8.53033 14.2478L8 13.7175L7.46967 14.2478C7.76256 14.5407 8.23744 14.5407 8.53033 14.2478ZM8 12.6569L4.53033 9.18718C4.23744 8.89429 3.76256 8.89429 3.46967 9.18718C3.17678 9.48008 3.17678 9.95495 3.46967 10.2478L7.46967 14.2478L8 13.7175L8.53033 14.2478L16.2478 6.53033C16.5407 6.23743 16.5407 5.76256 16.2478 5.46967C15.955 5.17677 15.4801 5.17677 15.1872 5.46967L8 12.6569Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div><div class="jsx-1026031917 star-image"><picture class="jsx-4212101279 picture-component star-picture"><img alt="design icon" class="jsx-4212101279 star-icon" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/design_icon.png"></picture></div><div class="jsx-1026031917 star-text">Creative &amp; design</div></div></div> */}
 {/* <div class="star-wrapper" style="width: 140px;"><div tabindex="0" role="checkbox" aria-checked="false" class="jsx-1026031917 square-tag-component selectable-cluster" style="color: rgb(108, 108, 255);"><div class="jsx-1026031917 background-circle"></div><div class="jsx-1026031917 checkbox"><svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M8.53033 14.2478L8 13.7175L7.46967 14.2478C7.76256 14.5407 8.23744 14.5407 8.53033 14.2478ZM8 12.6569L4.53033 9.18718C4.23744 8.89429 3.76256 8.89429 3.46967 9.18718C3.17678 9.48008 3.17678 9.95495 3.46967 10.2478L7.46967 14.2478L8 13.7175L8.53033 14.2478L16.2478 6.53033C16.5407 6.23743 16.5407 5.76256 16.2478 5.46967C15.955 5.17677 15.4801 5.17677 15.1872 5.46967L8 12.6569Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div><div class="jsx-1026031917 star-image"><picture class="jsx-4212101279 picture-component star-picture"><img alt="workflows icon" class="jsx-4212101279 star-icon" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/workflows_icon.png"></picture></div><div class="jsx-1026031917 star-text">More workflows</div></div></div> */}
 {/* <div class="star-wrapper" style="width: 140px;"><div tabindex="0" role="checkbox" aria-checked="false" class="jsx-1026031917 square-tag-component selectable-cluster" style="color: rgb(0, 200, 117);"><div class="jsx-1026031917 background-circle"></div><div class="jsx-1026031917 checkbox"><svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M8.53033 14.2478L8 13.7175L7.46967 14.2478C7.76256 14.5407 8.23744 14.5407 8.53033 14.2478ZM8 12.6569L4.53033 9.18718C4.23744 8.89429 3.76256 8.89429 3.46967 9.18718C3.17678 9.48008 3.17678 9.95495 3.46967 10.2478L7.46967 14.2478L8 13.7175L8.53033 14.2478L16.2478 6.53033C16.5407 6.23743 16.5407 5.76256 16.2478 5.46967C15.955 5.17677 15.4801 5.17677 15.1872 5.46967L8 12.6569Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div><div class="jsx-1026031917 star-image"><picture class="jsx-4212101279 picture-component star-picture"><img alt="dev icon" class="jsx-4212101279 star-icon" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured images/Home Page - 2022 Rebrand/first_fold/icons/dev_icon.png"></picture></div><div class="jsx-1026031917 star-text">Software development</div></div></div> */}
+

@@ -1,0 +1,48 @@
+.user {
+    /* border: 2px solid black; */
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.user>div{
+    border: 2px solid rgb(185, 176, 176);
+    height: 40px;
+}
+.Inbox {
+    padding: 40px;
+}
+
+.user>div {
+   
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+span{
+    color: blue;
+}
+
+.got {
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* font-size: 15px; */
+    align-items: center;
+}
+
+.cont {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.img-1 {
+    border-radius: 50px;
+}
+h4 {
+    font-size: 15px;
+}
+
