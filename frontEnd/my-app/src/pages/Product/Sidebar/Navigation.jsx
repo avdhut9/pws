@@ -3,7 +3,7 @@ import Leftsidebar from "./Leftsidebar"
 import Rightsidebar from "./Rightsidebar"
 import Middle from "./Middle"
 import Header from '../Header/Header'
-import './Style.css';
+ import './Style.css';
  
 export const Navigation = () => {
   return (

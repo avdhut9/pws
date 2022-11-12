@@ -36,17 +36,13 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    /* flex-wrap: nowrap; */
-    /* align-items: center; */
+   
 }
 .Middle {
-    /* margin: 20px; */
-    /* border: solid 2px black; */
-    /* height: 500px; */
-    /* width: 80%; */
-    /* padding: 20px; */
+    margin: 40px 0px 0px 0px;    
+    width: 100%;   
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;   
     justify-content: space-evenly;
 }
 
@@ -62,23 +58,22 @@ ul {
 svg {
     color: white;
     font-size: 25px;
+    margin: 20px;
 }
 .card {
     margin: 10px;
 }
 .div1 {
     display: flex;
-    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    box-shadow: rgba(218, 210, 210, 0.35) 0px 5px 15px;
     justify-content: flex-start;
     text-align: start;
-    /* height: 90px; */
+   
     gap: 13px;
     padding: 8px;
     width: 100%;
-    /* margin-bottom: -20px; */
     margin-top: 6px;
-    /* padding-top: 26px; */
-    /* margin: 0px; */
+    
     border-radius: 10px;
     align-items: stretch;
 }
