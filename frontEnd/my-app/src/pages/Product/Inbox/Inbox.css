@@ -1,5 +1,5 @@
 .user {
-    /* border: 2px solid black; */
+   
     height: 150px;
     display: flex;
     justify-content: space-evenly;
@@ -23,14 +23,12 @@
     justify-content: flex-start;
     flex-direction: row;
 }
-span{
+#name{
     color: blue;
-}
+} 
 
 .got {
     display: flex;
-    /* justify-content: space-evenly; */
-    /* font-size: 15px; */
     align-items: center;
 }
 
@@ -42,7 +40,12 @@ span{
 .img-1 {
     border-radius: 50px;
 }
-h4 {
+#htag{
     font-size: 15px;
 }
-
+button#Add {
+    background-color: #108cf3;
+    border-radius: 20px;
+    color: white;
+    margin-right: 20px;
+}
