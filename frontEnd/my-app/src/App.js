@@ -13,12 +13,13 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import AllRoutes from './Routes/AllRoutes';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
      <Container maxW="100%" p="0px">
-      {/* <Navbar/> */}
+    <Navbar/> 
         <AllRoutes/>
       {/* <Footer/> */}
      </Container>
