@@ -18,12 +18,38 @@ import {
   ArrowForwardIcon,
   HamburgerIcon,
 } from '@chakra-ui/icons';
+import { AuthContext } from '../../contextapi/Authentication/Authentication';
+import { useContext } from 'react';
+import { useNavigate ,Navigate } from 'react-router-dom';
 
 export default function Navbar() {
+  const {auth,firstname,setAuth} = useContext(AuthContext);
+  const navigate=useNavigate();
+  const handleLogin=()=>{
+    console.log(auth)
+    if(!auth){
+      navigate("/signup")
+    }else{
+      setAuth(false);
+      navigate("/")
+    }
+  }
+
+  const HomePage=()=>{
+    navigate("/")
+  }
+  const handleProductPage=()=>{
+    if(auth){
+      navigate("/product")
+    }else{
+      navigate("/signup")
+    }
+  }
+
   return (
     <Box className={navStyle.main}>
       <Grid h="100%" templateColumns="17% 50% 33%" alignItems="center">
-        <Box>
+        <Box onClick={HomePage}>
           {/* <svg
             width="72"
             height="72"
@@ -77,7 +103,8 @@ export default function Navbar() {
               className={navStyle.button}
               as={Button}
               rightIcon={<ChevronDownIcon />}
-              // bg="transparent"
+              variant='ghost'
+              fontWeight="350"
             >
               Products
             </MenuButton>
@@ -87,7 +114,7 @@ export default function Navbar() {
                   PWS products
                 </Text>
                 <Grid templateColumns="repeat(2,1fr)" rowGap="50px">
-                  <Flex>
+                  <Flex onClick={handleProductPage}>
                     <Image></Image>
                     <Box>
                       <Text className={navStyle.product_title}>
@@ -341,20 +368,19 @@ export default function Navbar() {
         {/* </Hide> */}
         <Flex
         //  border="1px solid red"
+        display={{ base: 'none', sm: 'none', md: 'none', lg: 'flex' }}
         >
           <Button
             className={navStyle.button}
-            display={{ base: 'none', sm: 'none', md: 'none', lg: 'flex' }}
           >
             Pricing
           </Button>
           <Button
             className={navStyle.button}
-            display={{ base: 'none', sm: 'none', md: 'none', lg: 'flex' }}
           >
             Contact sales
           </Button>
-          <Button className={navStyle.button}>Log in</Button>
+          <Button className={navStyle.button} onClick={handleLogin}>{auth? "Logout":"Login/Signup"}</Button>
           <Button
             bg="#6c6cff"
             borderRadius="50"
@@ -365,6 +391,9 @@ export default function Navbar() {
             Get Started
           </Button>
         </Flex>
+
+
+
         <Menu >
           <MenuButton
             as={IconButton}
@@ -374,9 +403,246 @@ export default function Navbar() {
             display={{ base: 'block', sm: 'block', md: 'block', lg: 'none' }}
           />
           <MenuList>
-            <MenuItem>New Tab</MenuItem>
-            <MenuItem>New Window</MenuItem>
-            <MenuItem>Open Closed Tab</MenuItem>
+            <MenuItem><Menu>
+            <MenuButton
+              className={navStyle.button}
+              as={Button}
+              rightIcon={<ChevronDownIcon />}
+              variant='ghost'
+              fontWeight="350"
+            >
+              Products
+            </MenuButton>
+            <MenuList w={{ base: '50vw', sm: '80vw', md: '90vw' }} p="20px 8%">
+              <Box>
+                <Text mb="20px" fontSize="20px" fontWeight="700">
+                  PWS products
+                </Text>
+                <Grid templateColumns="repeat(1,1fr)" rowGap="50px">
+                  <Flex onClick={handleProductPage}>
+                    <Image></Image>
+                    <Box>
+                      <Text className={navStyle.product_title}>
+                        PWS work management
+                      </Text>
+                      <Text className={navStyle.product_desc}>
+                        For managing any project,task, and workflow
+                      </Text>
+                      <Flex gap="5px">
+                        <Text
+                          bg="#f1f1ff"
+                          color="#6d57ff"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Project & task management
+                        </Text>
+                        <Text
+                          bg="#f1f1ff"
+                          color="#6d57ff"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Operation
+                        </Text>
+                        <Text
+                          bg="#f1f1ff"
+                          color="#6d57ff"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Built your own
+                        </Text>
+                      </Flex>
+                    </Box>
+                  </Flex>
+                  <Flex>
+                    <Image></Image>
+                    <Box>
+                      <Text className={navStyle.product_title}>
+                        PWS marketer
+                      </Text>
+                      <Text className={navStyle.product_desc}>
+                        For marketing and creative teams
+                      </Text>
+                      <Flex gap="5px">
+                        <Text
+                          bg="#fef0f7"
+                          color="#c16090"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Content calender
+                        </Text>
+                        <Text
+                          bg="#fef0f7"
+                          color="#c16090"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Marketing strategy
+                        </Text>
+                        <Text
+                          bg="#fef0f7"
+                          color="#c16090"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Creative requests
+                        </Text>
+                      </Flex>
+                    </Box>
+                  </Flex>
+                  <Flex>
+                    <Image></Image>
+                    <Box>
+                      <Text className={navStyle.product_title}>
+                        PWS sales CRM
+                      </Text>
+                      <Text className={navStyle.product_desc}>
+                        For sales and customer-facing teams
+                      </Text>
+                      <Flex gap="5px">
+                        <Text
+                          bg="#d6f8f8"
+                          color="#397d7d"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Contact management
+                        </Text>
+                        <Text
+                          bg="#d6f8f8"
+                          color="#397d7d"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Sales pipeline
+                        </Text>
+                        <Text
+                          bg="#d6f8f8"
+                          color="#397d7d"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Lead management
+                        </Text>
+                      </Flex>
+                    </Box>
+                  </Flex>
+                  <Flex>
+                    <Image></Image>
+                    <Box>
+                      <Text className={navStyle.product_title}>
+                        PWS projects
+                      </Text>
+                      <Text className={navStyle.product_desc}>
+                        For PMO teams and projects managers
+                      </Text>
+                      <Flex gap="5px">
+                        <Text
+                          bg="#fff7eb"
+                          color="#d38a53"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Advanced projects
+                        </Text>
+                        <Text
+                          bg="#fff7eb"
+                          color="#d38a53"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Portfolio management
+                        </Text>
+                        <Text
+                          bg="#fff7eb"
+                          color="#d38a53"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Critical path
+                        </Text>
+                      </Flex>
+                    </Box>
+                  </Flex>
+                  <Flex>
+                    <Image></Image>
+                    <Box>
+                      <Text className={navStyle.product_title}>PWS dev</Text>
+                      <Text className={navStyle.product_desc}>
+                        For development and product teams
+                      </Text>
+                      <Flex gap="5px">
+                        <Text
+                          bg="#ebfbf4"
+                          color="#236f45"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Roadmap planning
+                        </Text>
+                        <Text
+                          bg="#ebfbf4"
+                          color="#236f45"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Bug tracking
+                        </Text>
+                        <Text
+                          bg="#ebfbf4"
+                          color="#236f45"
+                          p="0px 8px"
+                          fontSize="12px"
+                          fontWeight="semibold"
+                        >
+                          Scrum & Kanban
+                        </Text>
+                      </Flex>
+                    </Box>
+                  </Flex>
+                </Grid>
+              </Box>
+            </MenuList>
+          </Menu>
+     </MenuItem>
+            
+            
+            <MenuItem>
+              <Menu>
+            <MenuButton
+              className={navStyle.button}
+              as={Button}
+              rightIcon={<ChevronDownIcon />}
+            >
+              Features
+            </MenuButton>
+            <MenuList>
+              <MenuItem>Download</MenuItem>
+              <MenuItem>Create a Copy</MenuItem>
+              <MenuItem>Mark as Draft</MenuItem>
+              <MenuItem>Delete</MenuItem>
+              <MenuItem>Attend a Workshop</MenuItem>
+            </MenuList>
+          </Menu></MenuItem>
+
+            <MenuItem>Open </MenuItem>
             <MenuItem>Open File...</MenuItem>
           </MenuList>
         </Menu>
