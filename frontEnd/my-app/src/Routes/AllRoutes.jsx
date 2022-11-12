@@ -17,9 +17,7 @@ export default function AllRoutes(){
     <Route path="/signup" element={<SignUp/>}></Route>
     <Route path="/product" element={<ProductRout/>}></Route>
     {/* <Route path="/workspace" element={<Maintable/>}></Route> */}
-
    </Routes>
    )
-
 }
 

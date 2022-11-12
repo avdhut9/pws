@@ -1,17 +1,16 @@
 require("dotenv").config();
 const express = require("express");
-const connect = require("./config/db");
+const connect = require("./src/config/db");
 const app = express();
 const cors = require("cors");
 const PORT = process.env.PORT || 8080;
-const authRouter = require("./features/auth/auth.Router");
-const todoRouter=require("./features/Todo/todo.router")
+const authRouter = require("./src/features/auth/auth.Router");
+const todoRouter = require("./src/features/Todo/todo.router");
 
 app.use(express.json());
 app.use(cors());
 app.use("/auth", authRouter);
 app.use("/todo", todoRouter);
-
 
 app.get("/", async (req, res) => {
   try {

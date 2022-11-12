@@ -4,7 +4,7 @@
   "description": "\"PWS-backend\"",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon src/index.js"
+    "start": "nodemon Backend/AUTH/index.js"
   },
   "author": "",
   "license": "ISC",
