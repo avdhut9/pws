@@ -1,7 +1,7 @@
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { Box, Button, Center, FormControl, Img, Input, InputGroup, Text ,InputRightElement} from '@chakra-ui/react'
 import React, { useContext, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contextapi/Authentication/Authentication'
 import { Navigate } from 'react-router-dom'
 const init = {
@@ -12,8 +12,9 @@ const init = {
     age:""
 }
 const SignUp = () => {
+    const navigate = useNavigate()
     const [show ,setShow] = useState(false)
-    const {postSignUp,firstName,error} = useContext(AuthContext)
+    const {postSignUp,firstName,error,SignAuth} = useContext(AuthContext)
     const [cred,setCred] = useState(init)
     const handleChange = (e)=>{
         const {name,value} = e.target
@@ -32,6 +33,10 @@ const SignUp = () => {
             e.preventDefault()
             postSignUp(cred)
             setCred(init)
+    }
+
+    if(SignAuth){
+    return navigate("/login")
     }
   return (
     <Box w="40%" m="auto">
@@ -82,12 +87,11 @@ const SignUp = () => {
            
             <br />
             
-            { error ?  (<Navigate to="/login"/>)  : 
-                <Input type="submit"onClick={handleSubmit} value="Sign up" size="lg" ml="75px" mt="10px" w="85%" bg="#0073ea" color="white" />
-             }
+              <Input type="submit"onClick={handleSubmit} value="Sign up" size="lg" ml="75px" mt="10px" w="85%" bg="#0073ea" color="white" />    
+             
                
             
-            { firstName && <h1 style={{marginLeft:"75px",marginRight:"10px",marginTop:"10px",color:"red"}}>Cannot create with existing User ?</h1>}
+            { firstName && <h3 style={{marginLeft:"75px",marginRight:"10px",marginTop:"10px",color:"red"}}>{firstName}</h3> }
             <Center mt="40px"><span style={lineStyleL}></span> OR <span style={lineStyleL}></span></Center>
         </FormControl>
         <Center border="1px solid teal" w="20%" borderRadius="5px" p="5px" m="auto" columnGap="10px"><Img src="https://cdn.monday.com/images/logo_google_v2.svg"/><Text >Google</Text></Center>

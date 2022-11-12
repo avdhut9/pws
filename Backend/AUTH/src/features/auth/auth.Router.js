@@ -19,34 +19,38 @@ app.post("/login", async (req, res) => {
     console.log(user);
     if (user) {
       if (password == user.password) {
-        res.send({ token: `${user.name}-${email}-${user._id}` });
+        res.status(200).send({ token: `${user.name}-${email}-${user._id}` });
       } else {
-        res.send(`wrong Password for the ${email}`);
+        res.status(400).send(`wrong Password for the ${email}`);
       }
     } else {
-      res.send(`User with email-->${email} doesn't exist`);
+      res.status(400).send(`User with email-->${email} doesn't exist`);
     }
   } catch (er) {
     console.log(er.message);
-    res.send(er.message);
+    res.status(400).send(er.message);
   }
 });
 
 app.post("/signup", async (req, res) => {
-  const { email, password, name } = req.body;
+  const { email, password, age, gender, name } = req.body;
+  if (!email || !password || !name || !gender) {
+    return res.status(400).send("Empty Field");
+  }
+  console.log(req.body,"inside quth signup")
   try {
     let User = await authModel.find({ email });
     if (User.length !== 0) {
       console.log(User);
-      return res.send("Cannot create User with existing user");
+      return res.status(400).send("Cannot create User with existing user");
     } else {
       let userCreate = await authModel.create({
         ...req.body,
       });
-      return res.send(userCreate);
+      return res.status(200).send(userCreate);
     }
   } catch (er) {
-    res.send("Require Credentials missing");
+    res.status(400).send("Require Credentials missing");
   }
 });
 module.exports = app;

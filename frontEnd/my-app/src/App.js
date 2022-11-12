@@ -16,7 +16,13 @@ import { ColorModeSwitcher } from './ColorModeSwitcher';
 // import { Logo } from './Logo';
 import AllRoutes from './Routes/AllRoutes';
 
+import Maintable from './components/Table/Maintable';
+
+// import { Navigation } from './Product/Sidebar/Navigation';
+
+
 import Navbar from './components/Navbar/Navbar';
+
 
 
 function App() {
