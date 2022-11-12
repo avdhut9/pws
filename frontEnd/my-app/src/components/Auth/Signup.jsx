@@ -3,7 +3,7 @@ import { Box, Button, Center, FormControl, Img, Input, InputGroup, Text ,InputRi
 import React, { useContext, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contextapi/Authentication/Authentication'
-import { Navigate } from 'react-router-dom'
+import PWS from "../Navbar/PWS.png"
 const init = {
     name:"",
     email:"",
@@ -39,8 +39,8 @@ const SignUp = () => {
     return navigate("/login")
     }
   return (
-    <Box w="40%" m="auto">
-            <Center mt="70px" fontSize='xl' as="b">Welcome to <Img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png" ml="5px" w='20%'/></Center>
+    <Box w="40%" m="auto" mb="100px">
+            <Center mt="20px" fontSize='xl' as="b">Welcome to <Img src={PWS} ml="5px" w='15%'/></Center>
             <Center fontSize='xl' fontWeight="lighter" mb="40px">Get started - it's free. No credit card needed.</Center>
         <FormControl  className="Login_boxes" margin="auto"   w="100%">
         <Box display="flex" pl="33px">
