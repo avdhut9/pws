@@ -42,9 +42,9 @@ app.get("/:email", async (req, res) => {
 //<<------Find single group by id----->>>>
 
 app.get("/", async (req, res) => {
-  const { groupId, email } = req.query;
+  const { groupId } = req.query;
   try {
-    let data = await todoModel.findOne({ email, _id: groupId });
+    let data = await todoModel.findOne({  _id: groupId });
     return res.send(data);
   } catch (er) {
     return res.send(er.message);
