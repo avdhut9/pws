@@ -12,6 +12,8 @@ const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
+
+
     <BrowserRouter>
       <AuthProvider>
         <Tablecontextprovider>
@@ -20,6 +22,8 @@ root.render(
         </Tablecontextprovider>
       </AuthProvider>
     </BrowserRouter>
+
+
   </StrictMode>
 );
 

@@ -61,7 +61,9 @@ export default function AuthProvider({children}){
     
   };
  return(
+
    <AuthContext.Provider value={{auth,setAuth,postLogin,postSignUp,firstName,error,sentence,logError,email,SignAuth}}>
+
     {children}
    </AuthContext.Provider>
  )
