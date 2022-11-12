@@ -42,9 +42,9 @@ app.get("/:email", async (req, res) => {
 //<<------Find single group by id----->>>>
 
 app.get("/", async (req, res) => {
-  const { groupId } = req.query;
+  const { groupId, email } = req.query;
   try {
-    let data = await todoModel.findOne({  _id: groupId });
+    let data = await todoModel.findOne({ email, _id: groupId });
     return res.send(data);
   } catch (er) {
     return res.send(er.message);
@@ -119,7 +119,7 @@ app.delete("/", async (req, res) => {
 
 app.patch("/", async (req, res) => {
   const { groupId, titleId } = req.query; // todo
-  
+
   if (!groupId || !titleId) {
     return res.status(200).send("Missing quires");
   }
@@ -128,7 +128,7 @@ app.patch("/", async (req, res) => {
 
     let filter = todo.map((item) => {
       if (item._id.toString() === titleId) {
-           item = {...req.body };
+        item = { ...req.body };
       }
       return item;
     });
@@ -146,4 +146,3 @@ app.patch("/", async (req, res) => {
 });
 
 module.exports = app;
-
