@@ -1,0 +1,7 @@
+.comp{
+    /* border:1px solid; */
+    flex-direction:column ;
+    gap:15px;
+    font-weight:350;
+    font-size:15px;
+}
