@@ -1,0 +1,17 @@
+.main{
+    /* border:5px solid; */
+    height:70px;
+}
+
+.button{
+    font-weight:350;
+    background-color: transparent;
+}
+
+.product_title{
+    font-size: 18px;
+}
+.product_desc{
+    font-size: 14px;
+    margin-bottom: 2px;
+}

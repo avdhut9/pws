@@ -15,20 +15,19 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 // import { Logo } from './Logo';
 import AllRoutes from './Routes/AllRoutes';
-import Maintable from './components/Table/Maintable';
 
-// import { Navigation } from './Product/Sidebar/Navigation';
+import Navbar from './components/Navbar/Navbar';
+
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
 
-    <Container maxW="100%" p="0px" >
-        {/* <Navbar/> */}
+     <Container maxW="100%" p="0px">
+    <Navbar/> 
 
-     
-      {/* <Navbar/> */}
 
+    
         <AllRoutes/>
        
       
