@@ -9,9 +9,9 @@ import Homepage from "../pages/Home/homepage";
 export default function AllRoutes(){
    return( 
    <Routes>
-    <Route path="/" element={<Homepage/>}/>
-    <Route path="/login" element={<Login/>}></Route>
-    <Route path="/signup" element={<SignUp/>}></Route>
+      <Route path="/" element={<Homepage/>}/>
+      <Route path="/login" element={<Login/>}></Route>
+      <Route path="/signup" element={<SignUp/>}></Route>
    </Routes>
    )
 
