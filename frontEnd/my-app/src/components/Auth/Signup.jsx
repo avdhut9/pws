@@ -43,22 +43,22 @@ const SignUp = () => {
   return (
     <Box>
         <Navbar/>
-    <Box w="40%" m="auto" mb="100px">
+    <Box w={{base:"90%",sm:"90%",md:"60%",lg:"40%"}} m="auto" mb="100px">
             <Center mt="20px" fontSize='xl' as="b">Welcome to <Img src={PWS} ml="5px" w='15%'/></Center>
             <Center fontSize='xl' fontWeight="lighter" mb="40px">Get started - it's free. No credit card needed.</Center>
         <FormControl  className="Login_boxes" margin="auto"   w="100%">
-        <Box display="flex" pl="33px">
-        <h1 style={{marginRight:"10px",fontWeight:"lighter",marginTop:"10px"}}>Name  </h1>
+        <Box display="flex">
+        {/* <h1 style={{marginRight:"10px",fontWeight:"lighter",marginTop:"10px"}}>Name  </h1> */}
             <Input type="text" placeholder='Name' onChange={handleChange} name="name" size="lg" width="100%" />
             </Box>
             <br />
-            <Box display="flex" pl="33px">
-        <h1 style={{marginRight:"10px",fontWeight:"lighter",marginTop:"10px"}}>Email  </h1>
+            <Box display="flex" >
+        {/* <h1 style={{marginRight:"10px",fontWeight:"lighter",marginTop:"10px"}}>Email  </h1> */}
             <Input type="email" placeholder='Email' onChange={handleChange} name="email" size="lg" width="100%" />
             </Box>
             <br />
             <Box display="flex">
-            <h1 style={{marginRight:"10px",fontWeight:"lighter",marginTop:"10px"}}>Password </h1>
+            {/* <h1 style={{marginRight:"10px",fontWeight:"lighter",marginTop:"10px"}}>Password </h1> */}
             <InputGroup>
             <Input type={show ? "text": "password"} placeholder='password' name="password" onChange={handleChange} size="lg" width="100%" />
                 <InputRightElement width='4.5rem'>
@@ -70,7 +70,7 @@ const SignUp = () => {
 
             </Box>
             <br />
-            <Box w="86%" ml="77px">
+            <Box w="100%" >
             <select name='gender' placeholder='Gender' onChange={handleChange} style={{padding:"10px",width:"100%",border:"1px solid #E0E0E0",borderRadius:"5px"}}>
                 <option value="">Gender</option>
                 <option value='Male'>Male</option>
@@ -80,8 +80,8 @@ const SignUp = () => {
             <br />
 
 
-            <Box display="flex" pl="33px">
-        <h1 style={{marginRight:"10px",fontWeight:"lighter",marginTop:"10px"}}>Age  </h1>
+            <Box display="flex" >
+        {/* <h1 style={{marginRight:"10px",fontWeight:"lighter",marginTop:"10px"}}>Age  </h1> */}
             <Input type="Number" placeholder='Age' onChange={handleChange} name="age" size="lg" width="100%" />
             </Box>
 
@@ -90,15 +90,16 @@ const SignUp = () => {
 
            
             <br />
-            
-              <Input type="submit"onClick={handleSubmit} value="Sign up" size="lg" ml="75px" mt="10px" w="85%" bg="#0073ea" color="white" />    
+            <Box w="100%"   textAlign="center">
+              <Input type="submit" onClick={handleSubmit} value="Sign up" size="lg"   mt="20px"  w={{base:"100%",sm:"100%",md:"50%",lg:"40%"}} bg="#0073ea" color="white" />    
+              </Box>
              
                
             
             { firstName && <h3 style={{marginLeft:"75px",marginRight:"10px",marginTop:"10px",color:"red"}}>{firstName}</h3> }
             <Center mt="40px"><span style={lineStyleL}></span> OR <span style={lineStyleL}></span></Center>
         </FormControl>
-        <Center border="1px solid teal" w="20%" borderRadius="5px" p="5px" m="auto" columnGap="10px"><Img src="https://cdn.monday.com/images/logo_google_v2.svg"/><Text >Google</Text></Center>
+        <Center border="1px solid teal" w={{base:"40%",sm:"40%",md:"30%",lg:"30%"}} borderRadius="5px" p="5px" m="auto" columnGap="10px"><Img src="https://cdn.monday.com/images/logo_google_v2.svg"/><Text >Google</Text></Center>
     
     
         <Center mt="30px">Already have account ?<NavLink to="/login" style={{color:"blue"}}>Login</NavLink></Center>

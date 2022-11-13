@@ -51,7 +51,7 @@ const Login = () => {
   return (
     <Box>
       <Navbar />
-      <Box w="40%" m="auto" mb="50px">
+      <Box w={{base:"90%",sm:"90%",md:"60%",lg:"40%"}}  m="auto" mb="50px">
         <Center display="flex" m="auto" w="5%" mt="50px">
           <Text fontSize="5xl" as="b">
             Log{' '}
@@ -64,8 +64,8 @@ const Login = () => {
           {sentence ? sentence : null}
         </Center>
         <FormControl className="Login_boxes" margin="auto" w="100%">
-          <Box display="flex" pl="33px">
-            <h1
+          <Box display="flex">
+            {/* <h1
               style={{
                 marginRight: '10px',
                 fontWeight: 'lighter',
@@ -73,7 +73,7 @@ const Login = () => {
               }}
             >
               Email{' '}
-            </h1>
+            </h1> */}
             <Input
               type="text"
               placeholder="Email"
@@ -85,7 +85,7 @@ const Login = () => {
           </Box>
           <br />
           <Box display="flex">
-            <h1
+            {/* <h1
               style={{
                 marginRight: '10px',
                 fontWeight: 'lighter',
@@ -93,7 +93,7 @@ const Login = () => {
               }}
             >
               Password{' '}
-            </h1>
+            </h1> */}
             <InputGroup>
               <Input
                 type={show ? 'text' : 'password'}
@@ -118,7 +118,6 @@ const Login = () => {
           <br />
           <h1
             style={{
-              marginLeft: '75px',
               marginRight: '10px',
               marginTop: '10px',
               color: '#0073ea',
@@ -126,16 +125,18 @@ const Login = () => {
           >
             Forgot your password ?
           </h1>
+          <Box textAlign="center" >
           <Input
             type="submit"
             onClick={handleLogin}
             value="Login →"
             size="lg"
-            ml="75px"
-            w="85%"
+            // ml="75px"
+            w={{base:"100%",sm:"100%",md:"50%",lg:"40%"}}
             bg="#0073ea"
             color="white"
           />
+          </Box>
           {logError && (
             <h1
               style={{
@@ -157,11 +158,12 @@ const Login = () => {
         <br />
         <Center
           border="1px solid teal"
-          w="20%"
+          w={{base:"40%",sm:"40%",md:"30%",lg:"30%"}}
           borderRadius="5px"
           p="10px"
           m="auto"
           columnGap="10px"
+          
         >
           <Img src="https://cdn.monday.com/images/logo_google_v2.svg" />
           <Text>Google</Text>
