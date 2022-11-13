@@ -57,7 +57,7 @@ setstate({
 console.log(state)
 async function add(){
     
-const res=await fetch (`http://localhost:8080/todo?groupId=${id}&titleId=${state._id}`,{
+const res=await fetch (`https://test-service-app.onrender.com/todo?groupId=${id}&titleId=${state._id}`,{
     method:"PATCH",
     body:JSON.stringify(state),
     headers:{
@@ -74,7 +74,7 @@ const res=await fetch (`http://localhost:8080/todo?groupId=${id}&titleId=${state
 
     }
 async function todoelement(){
-    const res=await fetch (`http://localhost:8080/todo?groupId=${id}&titleId=${state._id}`,{
+    const res=await fetch (`https://test-service-app.onrender.com/todo?groupId=${id}&titleId=${state._id}`,{
         method:"DELETE",
         body:JSON.stringify(state),
         headers:{
@@ -146,10 +146,10 @@ if(state.status==true){
             </Select></Td> */}
             <Td>
               {/* {state.startDate} */}
-              <Input size="sm" onChange={change} name="startDate" value={state.startDate}/>
+              <Input size="sm" type="date" onChange={change} name="startDate" value={state.startDate}/>
             </Td>
         {/* <Td>{state.endDate}</Td> */}
-       <Td >  <Input  size="sm" onChange={change} name="endDate" value={state.endDate}/></Td>
+       <Td >  <Input type="date"  size="sm" onChange={change} name="endDate" value={state.endDate}/></Td>
        
         <Td>
      
