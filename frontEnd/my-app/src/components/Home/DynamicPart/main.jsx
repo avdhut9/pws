@@ -46,7 +46,7 @@ setstate({
             <Grid pt="10px" pb="10px" boxShadow="xl" pr="100px" pl="100px" templateColumns={breakpoints} w="60%" m="auto" justifyContent="center"  gap="10px"  alignItems="center" bgColor="">
                 <GridItem >
                     <Box onClick={()=>change("https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/final-videos-tabs/7_status.mp4","Boards","Everything starts with a visual board — the core of monday.com Work OS. Tailor it your way and manage anything from projects to departments.")} m="auto"  _hover={{ bg:"#f0f3ff",cursor:"pointer", color:"#77f" }}>
-                    <Image m="auto" w="30px" src="https://img.icons8.com/ios-glyphs/2x/long.png"/>
+                    <Image m="auto" w="30px" src="https://img.icons8.com/external-flaticons-flat-flat-icons/2x/external-board-recruitment-agency-flaticons-flat-flat-icons-2.png"/>
                    <VStack>
                    <Text fontSize="14px" textAlign="center" >Board</Text>
                    </VStack>
@@ -54,7 +54,7 @@ setstate({
                 </GridItem>
                 <GridItem>
                 <Box onClick={()=>change("https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/final-videos-tabs/1_Views.mp4","Views","Visualize and plan your work more efficiently with multiple views: Kanban board, calendar, timeline, Gantt chart, and more.")}  m="auto" _hover={{ bg:"#f0f3ff",cursor:"pointer",color:"#77f" }}>
-                    <Image m="auto" w="30px" src="https://img.icons8.com/ios-glyphs/2x/view-column.png"/>
+                    <Image m="auto" w="30px" src="https://img.icons8.com/stickers/2x/static-views.png"/>
                    <VStack>
                    <Text fontSize="14px" textAlign="center">Views</Text>
                    </VStack>
@@ -62,7 +62,7 @@ setstate({
                 </GridItem>
                 <GridItem>
                 <Box onClick={()=>change("https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/final-videos-tabs/2_Dashboards.mp4","Dashboards","Get the insights you need to make decisions with confidence. Keep track of progress, timelines, and budgets with custom dashboards.")} m="auto" _hover={{ bg:"#f0f3ff",cursor:"pointer",color:"#77f" }}>
-                    <Image m="auto" w="30px" src="https://img.icons8.com/ios-glyphs/2x/long.png"/>
+                    <Image m="auto" w="30px" src="https://img.icons8.com/color/2x/dashboard-layout.png"/>
                    <VStack>
                    <Text fontSize="14px" textAlign="center" >Dashboards</Text>
                    </VStack>
@@ -70,7 +70,7 @@ setstate({
                 </GridItem>
                 <GridItem>
                 <Box onClick={()=>change("https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/final-videos-tabs/4_Integrations.mp4","Integrations","Connect monday.com with all your favorite tools and get more work done. Integrate Slack, Dropbox, Adobe Creative Cloud, and more.")}  m="auto" _hover={{ bg:"#f0f3ff",cursor:"pointer",color:"#77f" }}>
-                    <Image m="auto" w="30px" src="https://img.icons8.com/ios-glyphs/2x/long.png"/>
+                    <Image m="auto" w="30px" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/2x/external-development-experience-through-the-native-integrations-of-azure-with-visual-studio-logo-shadow-tal-revivo.png"/>
                    <VStack>
                    <Text fontSize="14px" textAlign="center" >integrations</Text>
                    </VStack>
@@ -78,7 +78,7 @@ setstate({
                 </GridItem>
                 <GridItem>
                 <Box onClick={()=>change("https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/final-videos-tabs/3_Automations.mp4","Automations","Streamline processes to focus on the work that matters. Choose from a variety of automation recipes or create your own in minutes.")} m="auto" _hover={{ bg:"#f0f3ff",cursor:"pointer",color:"#77f"}}>
-                    <Image m="auto" w="30px" src="https://img.icons8.com/ios-glyphs/2x/long.png"/>
+                    <Image m="auto" w="30px" src="https://img.icons8.com/fluency/2x/settings-3.png"/>
                    <VStack>
                    <Text fontSize="14px" textAlign="center" >Automations</Text>
                    </VStack>
@@ -86,7 +86,7 @@ setstate({
                 </GridItem>
                 <GridItem>
                 <Box onClick={()=>change("https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/final-videos-tabs/5_Apps.mp4","Apps","Expand the capabilities of your Work OS with monday apps. Enhance your workflows with custom views, widgets, integrations, and more.")} m="auto" _hover={{ bg:"#f0f3ff",cursor:"pointer",color:"#77f" }}>
-                    <Image m="auto" w="30px" src="https://img.icons8.com/ios-glyphs/2x/long.png"/>
+                    <Image m="auto" w="30px" src="https://img.icons8.com/external-others-iconmarket/2x/external-apps-android-app-others-iconmarket.png"/>
                    <VStack>
                    <Text fontSize="14px" textAlign="center" >Apps</Text>
                    </VStack>
@@ -94,7 +94,7 @@ setstate({
                 </GridItem>
                 <GridItem>
                 <Box onClick={()=>change("https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/final-videos-tabs/6_Docs.mp4","Docs","Transform text into action items, in just a few clicks. Connect, collaborate, and execute ideas and workflows in real-time from any doc.")}  m="auto" _hover={{ bg:"#f0f3ff",cursor:"pointer",color:"#77f" }}>
-                    <Image m="auto" w="30px" src="https://img.icons8.com/ios-glyphs/2x/long.png"/>
+                    <Image m="auto" w="30px" src="https://img.icons8.com/color/2x/google-docs.png"/>
                    <VStack>
                    <Text fontSize="14px" textAlign="center" >Docs</Text>
                    </VStack>

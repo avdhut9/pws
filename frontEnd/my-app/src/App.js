@@ -23,11 +23,11 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider >
       <Container maxW="100%" p="0px">
-        <Navbar />
+        {/* <Navbar /> */}
         <AllRoutes />
-        <Footer />
+        {/* <Footer /> */}
       </Container>
     </ChakraProvider>
   );

@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { AuthContext } from '../../contextapi/Authentication/Authentication'
+import Footer from '../Footer/Footer'
+import Navbar from '../Navbar/Navbar'
 import "./Login.module.css"
 
 const Login = () => {
@@ -35,7 +37,9 @@ const Login = () => {
     }
 
   return (
-    <Box w="40%" m="auto">
+    <Box>
+        <Navbar/>
+    <Box w="40%" m="auto" mb="50px">
         <Center display="flex" m="auto" w="5%"   mt="50px" >
             <Text fontSize='5xl' as="b">Log </Text>
             <Text fontSize='5xl' fontWeight="lighter">In</Text>
@@ -77,6 +81,8 @@ const Login = () => {
     border: "0.5px solid #c5c7d0",
     margin: "16px"}}></span></Center>
     <Center fontSize="md" mb="30px"> In Order to Sign up with Different account <NavLink to="/signup"> <Button  ml="10px" bg="#0073ea" color="white">Sign up</Button> </NavLink></Center>
+    
+    </Box>
     
     </Box>
   )

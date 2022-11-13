@@ -48,6 +48,11 @@
 
 .Leftsidebar{
     margin: 0px;
+    z-index: 5;
+    position: fixed;
+    background-color:rgb(41,47,76);
+    height:1200px;
+   
 }
 ul {
     
@@ -58,7 +63,8 @@ ul {
 svg {
     color: white;
     font-size: 25px;
-    margin: 20px;
+    margin: 10px;
+   
 }
 .card {
     margin: 10px;
@@ -98,7 +104,7 @@ button.vfd.btn.btn-primary {
     border: none;
     height: 100px;
     border-radius: 0px 10px 10px 0px;
-    background-color: #10d410;
+    background-color:rgb(37,135,80);
     width: 33px;
     margin: 20px;
 }

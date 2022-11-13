@@ -11,14 +11,17 @@ const navigate = useNavigate()
   const handleClick = () => {    
     navigate("/workspace")
   }
-
+  
+function ok1(){
+  navigate("/product")
+}
   return (
     <div className='Leftsidebar'>
-      <ul> <img src="https://cdn.monday.com/images/logos/monday_logo_icon.png" alt="Girl in a jacket" width="50" height="50"/>
+      <ul onClick={ok1}> <img src="https://cdn.monday.com/images/logos/monday_logo_icon.png" alt="Girl in a jacket" width="50" height="50"/>
      </ul>
       <ul onClick={handleClick}>
         <BsBookmark/> </ul>
-      <ul ><BsBell/></ul>
+      <ul onClick={ok1} ><BsBell/></ul>
       <ul> <BsFillInboxFill/> </ul>
        <ul><BsCalendar/></ul> 
       <ul><BsStar/></ul>

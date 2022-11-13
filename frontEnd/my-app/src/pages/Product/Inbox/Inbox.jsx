@@ -2,7 +2,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import inStyle from "./Inbox.module.css"
-import  "./Inbox.css"
+ import  "./Inbox.css"
 function Inbox() {
   return (
     <Accordion defaultActiveKey={['0']} alwaysOpen>

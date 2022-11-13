@@ -3,6 +3,7 @@ import { Box, Button, Center, FormControl, Img, Input, InputGroup, Text ,InputRi
 import React, { useContext, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contextapi/Authentication/Authentication'
+import Navbar from '../Navbar/Navbar'
 import PWS from "../Navbar/PWS.png"
 const init = {
     name:"",
@@ -39,6 +40,8 @@ const SignUp = () => {
     return navigate("/login")
     }
   return (
+    <Box>
+        <Navbar/>
     <Box w="40%" m="auto" mb="100px">
             <Center mt="20px" fontSize='xl' as="b">Welcome to <Img src={PWS} ml="5px" w='15%'/></Center>
             <Center fontSize='xl' fontWeight="lighter" mb="40px">Get started - it's free. No credit card needed.</Center>
@@ -98,6 +101,7 @@ const SignUp = () => {
     
     
         <Center mt="30px">Already have account ?<NavLink to="/login" style={{color:"blue"}}>Login</NavLink></Center>
+    </Box>
     </Box>
   )
 }

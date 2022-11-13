@@ -33,7 +33,7 @@ export default function Home(){
   <Box pt={5}>
   <VStack>
    <Text textAlign="center" margin="auto" fontSize="20px" color="white" w="70%" >
-What would you like to manage with monday.com Work OS? 
+What would you like to manage with PWS.com Work OS? 
 </Text>
    </VStack>
   </Box>

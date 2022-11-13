@@ -3,7 +3,7 @@ import Leftsidebar from "./Leftsidebar"
 import Rightsidebar from "./Rightsidebar"
 import Middle from "./Middle"
 import Header from '../Header/Header'
- import './Style.css';
+import './Style.css';
  
 export const Navigation = () => {
   return (
@@ -12,11 +12,11 @@ export const Navigation = () => {
       <Leftsidebar/>      
       </div>
      <div className='Midrig'>
-     <Header/>
+    {/* <Header/> */}
      <div className='Midrigwh'>
-      <Middle/>
+      {/* <Middle/> */}
       
-      <Rightsidebar/>
+    {/* <Rightsidebar/> */}
      </div>
     
      </div>
