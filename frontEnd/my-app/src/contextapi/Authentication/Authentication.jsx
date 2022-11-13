@@ -4,14 +4,14 @@ import { createContext, useState } from "react";
 export const AuthContext=createContext()
 export default function AuthProvider({children}){
   const token = localStorage.getItem("token")
-  
+  const mailLocal = localStorage.getItem("email")
   const [auth,setAuth] = useState(!!token)
   const [SignAuth,setSignAuth] = useState(false)
   const [firstName,setName] = useState("")          //signIn
   const [error,setError] = useState(false)          //signIn
   const [sentence , setSentence] = useState("")     //login
   const [logError,setLogError] = useState(false)    //login
-  const [email,setEmail] = useState("")
+  const [email,setEmail] = useState(mailLocal)
   const postLogin = async ({ email, password }) => {
     try{
       console.log("inside signup",{password,email})
@@ -29,6 +29,7 @@ export default function AuthProvider({children}){
        
         setTimeout(()=>{
           localStorage.setItem("token",data.token)
+          localStorage.setItem("email",b)
           setAuth(true)
           setLogError(false)
         },3000)

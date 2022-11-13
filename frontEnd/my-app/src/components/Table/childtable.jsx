@@ -35,7 +35,7 @@ export default function Childtable({ state, i }) {
     let obj = {
       email: state.email,
       groupNumber: state.groupNumber,
-      groupName: state.GroupName,
+      groupName: state.groupName,
       todo: [
         {
           status: false,

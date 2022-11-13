@@ -29,6 +29,7 @@ const Leftsidebar = () => {
   }
   const handleLogout = () => {
     localStorage.removeItem('token');
+    localStorage.removeItem('email');
     setAuth(false);
   };
   return (

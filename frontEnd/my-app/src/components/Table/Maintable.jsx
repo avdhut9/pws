@@ -12,7 +12,7 @@ export default function Maintable() {
   const { state, getdata } = useContext(tablecontext);
 
   const { email } = useContext(AuthContext);
-
+console.log(email,state,"inside maintable")
   async function addtodo() {
     let obj = {
       email: email,
@@ -36,7 +36,7 @@ export default function Maintable() {
       },
     });
     const data = await res.json();
-
+    console.log(data)
     getdata();
   }
   //     async function getdata(){
