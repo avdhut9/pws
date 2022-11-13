@@ -575,7 +575,7 @@ export default function Navbar() {
             Contact sales
           </Button>
           <Button variant="ghost" fontWeight="350" onClick={handleLogin}>
-            {auth ? {firstName} : 'Login/Signup'}
+            {auth ? firstName : 'Login/Signup'}
           </Button>
           <Button
             bg="#6c6cff"
