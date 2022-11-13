@@ -16,7 +16,7 @@ export default function Tablecontextprovider({ children }) {
     console.log(email);
     try {
       const res = await fetch(
-        `https://test-service-app.onrender.com/todo/${email}`
+        `https://server-run.onrender.com/todo/${email}`
       );
       const data = await res.json();
 

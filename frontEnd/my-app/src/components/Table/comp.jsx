@@ -57,7 +57,7 @@ setstate({
 console.log(state)
 async function add(){
     
-const res=await fetch (`https://test-service-app.onrender.com/todo?groupId=${id}&titleId=${state._id}`,{
+const res=await fetch (`https://server-run.onrender.com/todo?groupId=${id}&titleId=${state._id}`,{
     method:"PATCH",
     body:JSON.stringify(state),
     headers:{
@@ -74,7 +74,7 @@ const res=await fetch (`https://test-service-app.onrender.com/todo?groupId=${id}
 
     }
 async function todoelement(){
-    const res=await fetch (`https://test-service-app.onrender.com/todo?groupId=${id}&titleId=${state._id}`,{
+    const res=await fetch (`https://server-run.onrender.com/todo?groupId=${id}&titleId=${state._id}`,{
         method:"DELETE",
         body:JSON.stringify(state),
         headers:{

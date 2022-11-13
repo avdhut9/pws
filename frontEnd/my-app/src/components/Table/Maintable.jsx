@@ -12,7 +12,7 @@ export default function Maintable() {
   const { state, getdata } = useContext(tablecontext);
 
   const { email } = useContext(AuthContext);
-console.log(email,state,"inside maintable")
+console.log(email,`Group${state.length + 1}`,"inside maintable")
   async function addtodo() {
     let obj = {
       email: email,
@@ -28,7 +28,8 @@ console.log(email,state,"inside maintable")
         },
       ],
     };
-    const res = await fetch('https://test-service-app.onrender.com/todo', {
+    console.log(obj.groupName)
+    const res = await fetch('https://server-run.onrender.com/todo', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {

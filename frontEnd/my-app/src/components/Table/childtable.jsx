@@ -46,7 +46,7 @@ export default function Childtable({ state, i }) {
         },
       ],
     };
-    const res = await fetch('https://test-service-app.onrender.com/todo', {
+    const res = await fetch('https://server-run.onrender.com/todo', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
@@ -59,7 +59,7 @@ export default function Childtable({ state, i }) {
     getdata();
   }
   async function delectgroup() {
-    const res = await fetch(`https://test-service-app.onrender.com/todo/${state._id}`, {
+    const res = await fetch(`https://server-run.onrender.com/todo/${state._id}`, {
       method: 'DELETE',
 
       headers: {
@@ -70,6 +70,7 @@ export default function Childtable({ state, i }) {
 
     getdata();
   }
+  
   return (
     <Box>
       <TableContainer w="80%" m="auto">
