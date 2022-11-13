@@ -15,7 +15,7 @@ export default function AuthProvider({children}){
   const postLogin = async ({ email, password }) => {
     try{
       console.log("inside signup",{password,email})
-      let response = await axios.post("http://localhost:8080/auth/login", {
+      let response = await axios.post("https://server-run.onrender.com/auth/login", {
         email: email,
         password: password,
       });
@@ -46,7 +46,7 @@ export default function AuthProvider({children}){
   const postSignUp = async ({ email, password, name, gender,age }) => {
     try{
       console.log({ email, password, name, gender,age })
-      let response = await axios.post("http://localhost:8080/auth/signup", {
+      let response = await axios.post("https://server-run.onrender.com/auth/signup", {
         email: email,
         password: password,
         name: name,
