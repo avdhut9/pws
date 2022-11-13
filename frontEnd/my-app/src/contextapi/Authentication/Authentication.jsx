@@ -5,6 +5,7 @@ export const AuthContext=createContext()
 export default function AuthProvider({children}){
   const token = localStorage.getItem("token")
   const mailLocal = localStorage.getItem("email")
+  const [Sname,setSname] = useState("")
   const [auth,setAuth] = useState(!!token)
   const [SignAuth,setSignAuth] = useState(false)
   const [firstName,setName] = useState("")          //signIn
@@ -24,6 +25,7 @@ export default function AuthProvider({children}){
         let [a,b,c] = data.token.split("-")
         console.log(a,b,c,"inside login")
         setSentence(`Welcome ${a} `)
+        setSname(a)
         setName(a)
         setEmail(b)
        
@@ -69,7 +71,7 @@ export default function AuthProvider({children}){
   };
  return(
 
-   <AuthContext.Provider value={{auth,setAuth,postLogin,postSignUp,firstName,error,sentence,logError,email,SignAuth}}>
+   <AuthContext.Provider value={{auth,setAuth,postLogin,postSignUp,firstName,error,sentence,logError,email,SignAuth,Sname}}>
 
     {children}
    </AuthContext.Provider>
