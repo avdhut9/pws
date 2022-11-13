@@ -3,14 +3,15 @@ import { createContext, useState } from "react";
 
 export const AuthContext=createContext()
 export default function AuthProvider({children}){
-  const [auth,setAuth] = useState(false)
+  const token = localStorage.getItem("token")
+  
+  const [auth,setAuth] = useState(!!token)
   const [SignAuth,setSignAuth] = useState(false)
   const [firstName,setName] = useState("")          //signIn
   const [error,setError] = useState(false)          //signIn
   const [sentence , setSentence] = useState("")     //login
   const [logError,setLogError] = useState(false)    //login
   const [email,setEmail] = useState("")
-  
   const postLogin = async ({ email, password }) => {
     try{
       console.log("inside signup",{password,email})
@@ -21,11 +22,16 @@ export default function AuthProvider({children}){
       let data = response.data;
       if(data.token){
         let [a,b,c] = data.token.split("-")
+        console.log(a,b,c,"inside login")
+        setSentence(`Welcome ${a} `)
+        setName(a)
         setEmail(b)
-      console.log(a,b,c,"inside login")
-      setSentence(`Welcome ${a} `)
-      setName(a)
-      setLogError(false)
+       
+        setTimeout(()=>{
+          localStorage.setItem("token",data.token)
+          setAuth(true)
+          setLogError(false)
+        },3000)
       }else{
         setSentence("")
         setLogError(true)

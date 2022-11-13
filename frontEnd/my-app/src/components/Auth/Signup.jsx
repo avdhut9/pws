@@ -1,7 +1,7 @@
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { Box, Button, Center, FormControl, Img, Input, InputGroup, Text ,InputRightElement} from '@chakra-ui/react'
 import React, { useContext, useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { Navigate, NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contextapi/Authentication/Authentication'
 import Navbar from '../Navbar/Navbar'
 import PWS from "../Navbar/PWS.png"
@@ -15,7 +15,7 @@ const init = {
 const SignUp = () => {
     const navigate = useNavigate()
     const [show ,setShow] = useState(false)
-    const {postSignUp,firstName,error,SignAuth} = useContext(AuthContext)
+    const {postSignUp,firstName,error,SignAuth,auth} = useContext(AuthContext)
     const [cred,setCred] = useState(init)
     const handleChange = (e)=>{
         const {name,value} = e.target
@@ -36,8 +36,9 @@ const SignUp = () => {
             setCred(init)
     }
 
+    
     if(SignAuth){
-    return navigate("/login")
+        return navigate("/login")
     }
   return (
     <Box>
